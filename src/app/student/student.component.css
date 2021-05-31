@@ -1,0 +1,43 @@
+#top_bar {
+	background-image: url('https://community.khoros.com/t5/image/serverpage/image-id/152524iA390FD6E018B7104/image-size/large/is-moderation-mode/true?v=v2&px=999');
+	color: #ffffff;
+	padding: 1em 0em 0.5em 0.5em;
+}
+
+.fa {
+	cursor: pointer;
+}
+
+#profile_pic_holder {
+	max-height: 30em;
+	overflow-y: hidden;
+	border-radius: 10px;
+}
+
+#update_image_button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.3s linear;
+}
+
+#update_image_button:hover {
+	opacity: 1;
+	transition: opacity 0.3s linear;
+}
+
+#update_image_button > span {
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	border-radius: 100px;
+  	background: #3d3d3d;
+	padding: 0.5em 1em;
+	color: #ffffff;
+}

@@ -1,0 +1,258 @@
+<div class="container mb-5">
+    <mat-horizontal-stepper #stepper style="max-width: 800px;">
+        <mat-step [stepControl]="firstFormGroup" errorMessage="Personal Details are required.">
+          <form [formGroup]="firstFormGroup"  (ngSubmit)="onSubmitForm1(firstFormGroup.value)">
+            <ng-template matStepLabel>Basic Details</ng-template>
+            <div class="row">
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First name" formControlName="firstName" required>
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last name" formControlName="lastName" required>
+                    </mat-form-field>
+                </div>
+                <div class="col-3">
+                  <mat-form-field>
+                    <mat-label>Age</mat-label>
+                    <input matInput placeholder="Age" formControlName="age" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-3">
+                  <mat-form-field>
+                    <mat-label>Gender</mat-label>
+                    <input matInput placeholder="Gender" formControlName="Gender" required>
+                  </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email" required>
+                  </mat-form-field>
+            </div>
+            <div class="col-3">
+                <mat-form-field>
+                    <mat-label>Phone number</mat-label>
+                    <input matInput placeholder="Phone Number" formControlName="contactNo" required>
+                  </mat-form-field>
+            </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Address Line1</mat-label>
+                        <input matInput placeholder="Address Line 1" formControlName="addLine1" required>
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Address Line2</mat-label>
+                        <input matInput placeholder="Address Line 2" formControlName="addLine2" required>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <mat-form-field>
+                    <mat-label>City</mat-label>
+                    <input matInput placeholder="City" formControlName="city" required>
+                  </mat-form-field>
+            </div>
+            <div class="col-3">
+                <mat-form-field>
+                    <mat-label>State</mat-label>
+                    <input matInput placeholder="State" formControlName="state" required>
+                  </mat-form-field>
+            </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Country</mat-label>
+                        <input matInput placeholder="Country" formControlName="country" required>
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>PINCODE</mat-label>
+                        <input matInput placeholder="Pincode" formControlName="pincode" required>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div>
+              <p>All fields are mandatory</p>
+              <button mat-button type="submit" class="btn btn-primary" [disabled]="!firstFormGroup.valid" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" errorMessage="Educational Details are required">
+          <form [formGroup]="secondFormGroup" (ngSubmit)="onSubmitForm2(secondFormGroup.value)">
+            <ng-template matStepLabel>Educational Details</ng-template>
+            <div class="row">
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>School</mat-label>
+                        <input matInput placeholder="School" formControlName="school"
+                               required>
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Highest Degree</mat-label>
+                        <input matInput placeholder="Highest Degree" formControlName="highestDegree"
+                               required>
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Field of Study</mat-label>
+                        <input matInput placeholder="Field of Study" formControlName="fieldOfStudy"
+                               required>
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field >
+                        <mat-label>No.of years of experience</mat-label>
+                        <input matInput placeholder="No.of years of experience" formControlName="startDate"
+                               required>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Graduation Year(or expected)</mat-label>
+                        <input matInput placeholder="End Date(or expected)" formControlName="endDate"
+                               required>
+
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Percentage</mat-label>
+                        <input matInput placeholder="Grade / Percentage" formControlName="grade"
+                               >
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Activities and Societies</mat-label>
+                        <input matInput placeholder="Activities and Societies" formControlName="activities"
+                               >
+                      </mat-form-field>
+                </div>
+                <div class="col-3">
+                    <mat-form-field>
+                        <mat-label>Description</mat-label>
+                        <input matInput placeholder="Description" formControlName="description"
+                               >
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+              <mat-label>Skills</mat-label>
+              <mat-form-field>
+                <textarea matInput rows="5" placeholder="Provide SkillSet" formControlName="skillsTextarea"></textarea>
+              </mat-form-field>
+              <!-- <div>
+
+                <div  class="sub-heading">Skills</div>
+                  <textarea cols="30" rows="5" placeholder="Provide SkillSet seperated with Comma" formControlName="skillsTextarea"></textarea>
+                  
+            </div> -->
+            </div>
+            <div>
+              <p>Educational Details are Mandatory</p>
+              <button mat-button class="btn btn-secondary" matStepperPrevious >Back</button>
+              <button  mat-button type="submit" class="btn btn-primary" matStepperNext>Next</button>
+              <!-- <button [disabled]="!secondFormGroup.valid" mat-button type="submit" class="btn btn-primary" matStepperNext>Next</button> -->
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="saveFileForm">
+            <ng-template matStepLabel>Photo and Resume</ng-template>
+          <form [formGroup]="saveFileForm" (ngSubmit)="onExpSubmit()"> 
+
+            <div class="row">  
+              <!-- <div class="col-md-6">  
+                  <div class="row">  
+                      <div class="col-md-4">  
+                          <b>User Name</b>  
+                      </div>  
+                      <div class="col-md-5">  
+                          <input type="text" formControlName="UserName" placeholder="User Name">  
+                          </div>  
+                      </div>  
+                  </div>   -->
+                  <div class="col-md-6">  
+                      <div class="row">  
+                          <div *ngIf="isAddMode" class="col-md-6">  
+                              <b>Upload Resume</b>  
+                          </div>
+                          <div *ngIf="!isAddMode" class="col-md-6">  
+                            <b>Change Resume</b>  
+                        </div>  
+                          <div class="col-md-6">  
+                              <input type='file' #resumeInput>  
+                                  <br>  
+                                  </div>  
+                              </div>  
+                          </div>  
+                      </div> 
+                      <br>
+                        <div class="row">  
+                          <div class="col-md-6">
+                            <div class="row">
+                              <div *ngIf="isAddMode" class="col-md-6">  
+                                <b>Image</b>  
+                            </div>  
+                            <div *ngIf="!isAddMode" class="col-md-6">  
+                              <b>Change Image</b>  
+                          </div>
+                            <div class="col-md-6">  
+                                <input type='file' #logoInput (change)="onSelectFile($event.target.files)">  
+                                    <br>  
+                                    </div>  
+                            </div>
+
+                          </div>
+
+                                   
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-4">  
+                                        <img [src]="imageUrl" height="100" width="120">  
+                                        </div> 
+                                    </div>
+
+
+                                    <hr>
+                                    <div>
+                                        
+                                        <button mat-button class="btn btn-secondary" matStepperPrevious >Back</button>
+                                        <button  mat-button type="submit" class="btn btn-primary" matStepperNext>Next</button>
+                                        
+                                        <!-- <button [disabled]="!secondFormGroup.valid" mat-button type="submit" class="btn btn-primary" matStepperNext>Next</button> -->
+                                      </div>
+                                </form>                                  
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <div style="margin-top: 20px;">
+              Student Details are added Successfully. Go to Details of Students Enrolled.
+              <button (click)="finished()" [ngStyle]="{'color':'white'}" matTooltip="Student Details Table"
+              mat-icon-button class="example-icon favorite-icon btn btn-primary">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+          </div>
+<div>
+  <button mat-button class="btn btn-secondary" matStepperPrevious >Back</button>
+  <button mat-button class="btn btn-warning" (click)="stepper.reset()">Reset</button>
+</div>
+        </mat-step>
+      </mat-horizontal-stepper>
+      
+    
+</div>

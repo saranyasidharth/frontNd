@@ -1,0 +1,30 @@
+export class AdminStudentDataModel{
+    constructor(
+        public _id:String,
+        public addLine1: String,
+        public addLine2: String,
+        public city: String,
+        public contactNo: Number,
+        public country: String,
+        public email: String,
+        public firstName: String,
+        public lastName: String,
+        public pincode: Number,
+        public state: String,
+        public activities: String,
+        public description: String,
+        public endDate: String,
+        public fieldOfStudy: String,
+        public grade: String,
+        public highestDegree: String,
+        public school: String,
+        public startDate: String,
+        public age:Number,
+        public Gender:String,
+        public skillsTextarea:String,
+        public logoInput:String,
+        public img_cloudinary_id:String,
+        public resumeInput:String,
+        public res_cloudinary_id:String
+    ){}
+}

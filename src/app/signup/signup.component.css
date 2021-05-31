@@ -1,0 +1,200 @@
+.signupForm{
+  width: 35%;
+  margin: auto;
+  margin-bottom: 40px;;
+  padding: 40px;
+  background-color: rgba(128, 128, 128, 0.178);
+
+}@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  
+.loginForm{
+  width: 35%;
+  margin: auto;
+  margin-top:30px;
+  margin-bottom: 40px;;
+  padding: 40px;
+  background-color: rgba(128, 128, 128, 0.178);
+
+}
+
+
+#heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+#icon{
+  text-align: center;
+}
+
+#userIcon{
+  font-size: 5em;
+  color: black;
+  padding: 20px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#body{
+ position: relative;
+ height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  width: 320px;
+  text-align: center;
+}
+
+.form i{
+  z-index: 1;
+  color: #ccc;
+  font-size: 65px;
+  margin-bottom: 30px;
+}
+
+.form .signup-form{
+  display: none;
+}
+
+ .user-input{
+  width: 320px;
+  height: 50px;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+  background: rgba(22, 19, 19, 0.2);
+  color: rgb(24, 7, 7);
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.5s;
+  transition-property: border-left, border-right, box-shadow;
+}
+
+ .user-input:hover, .user-input:focus, .user-input:active{
+  border-left: solid 4px #4285F4;
+  border-right: solid 4px #4285F4;
+  box-shadow: 0 0 19px rgba(66, 133, 244, 0.8);
+}
+
+.form .options-01{
+  margin-bottom: 50px;
+}
+
+.form .options-01 input{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.form .options-01 .remember-me{
+  color: #bbb;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  float: left;
+  cursor: pointer;
+}
+
+.form .options-01 a{
+  color: #888;
+  font-size: 14px;
+  font-style: italic;
+  float: right;
+}
+
+.btn{
+  outline: none;
+  border: none;
+  width: 320px;
+  height: 55px;
+  background: #4285F4;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: border-left, border-right, box-shadow;
+}
+.box
+{
+    margin-left: .5cm;
+}
+
+.btn:hover{
+  border-left: solid 8px rgba(255, 255, 255, 0.5);
+  border-right: solid 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(66, 133, 244, 0.8);
+}
+
+.form .options-02{
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.form .options-02 a{
+  color: #4285F4;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 500px){
+  .form{
+    width: 95%;
+  }
+
+ .user-input{
+    width: 100%
+  }
+
+  .btn{
+    width: 100%;
+  }
+}
+      
+
+
+#heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    margin: auto;
+}
+
+#icon{
+  text-align: center;
+}
+
+#userIcon{
+  font-size: 5em;
+  color: black;
+  padding: 20px;
+}
+
+
+.message{
+  background-color: rgb(9, 151, 9);
+  padding: 7px;
+  font-size: 18px;
+  margin-top: 30px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}

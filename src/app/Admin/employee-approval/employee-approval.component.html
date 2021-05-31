@@ -1,0 +1,25 @@
+<div class="heading">Approve/Reject recruiters</div> <br>
+<div *ngIf="recruiter.length == 0">
+  <h5 class="text-center text-info">No recruiter approval requests to show</h5>
+</div>
+<div *ngIf="recruiter.length != 0" class="table-responsive"> 
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Recruiter Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let recruiter of recruiters; let i = index">
+        <th scope="row">{{i}}</th>
+        <td> {{recruiter.email}} </td>
+        <td>
+          <button class="btn btn-warning" (click)="updateRecruiter(recruiter._id)">Approve</button> &nbsp;
+          <button class="btn btn-danger" (click)="rejectRecruiter(recruiter._id)">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

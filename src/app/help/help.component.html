@@ -1,0 +1,67 @@
+<div class="container">
+	<div class="page-header" id="banner">
+		<div class="row mb-5">
+			<div class="col">
+				<h1>Frequently Asked Questions (FAQ)</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="bs-component">
+				<p class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+				<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus velit purus, eget egestas dolor fringilla eget. In luctus accumsan leo a sagittis. Sed vulputate varius hendrerit. Pellentesque semper dictum quam. In fermentum consectetur odio. Vestibulum vestibulum faucibus dolor et molestie. Phasellus quis tortor vel mauris viverra bibendum. Aliquam quis nibh at mauris fringilla blandit. Curabitur tortor odio, molestie lobortis urna nec, volutpat consectetur lacus. Nunc vehicula tincidunt lacus, in fringilla lectus. Donec felis diam, imperdiet id magna lacinia, elementum pharetra lectus. Sed sagittis sodales mauris vel pulvinar. Duis gravida pulvinar elementum. Sed vel efficitur leo, vitae dapibus sapien. Phasellus id tincidunt libero. Sed id convallis lorem.</p>
+				<p class="question">Proin eu congue velit. Pellentesque semper felis id nisl sodales molestie?</p>
+				<p class="answer">Donec volutpat dictum erat, sit amet accumsan leo ornare et. Nam et mattis nisi, sit amet lobortis mi. In consectetur est eget massa auctor, vel eleifend nulla porta. Curabitur commodo vitae velit a vulputate. Sed interdum tellus ac hendrerit commodo. Mauris sit amet elementum sapien. Duis risus urna, viverra et nulla ut, interdum aliquam felis. Aliquam accumsan mattis dignissim. Aliquam nec dictum lorem, vel semper risus. Aenean cursus ligula sem, et rutrum nisi commodo et. Quisque sodales sem vel interdum porta. Sed suscipit diam id pulvinar posuere. Praesent egestas quam eget augue ullamcorper blandit. Vivamus luctus turpis non tincidunt sollicitudin.</p>
+				<p class="question">Donec volutpat dictum erat, sit amet accumsan leo ornare et?</p>
+				<p class="answer">Nulla nec velit vel quam efficitur condimentum. Praesent ac dui vel neque pretium hendrerit. Vestibulum id commodo sapien, ut rutrum urna. Nulla at ipsum felis. Aenean semper justo nunc, quis ultricies ligula porta a. Phasellus pulvinar rhoncus venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et malesuada quam, tincidunt gravida elit. Nullam volutpat lectus id bibendum dapibus. Vestibulum pellentesque, sem et mollis posuere, turpis lacus eleifend tellus, eu gravida velit risus nec sapien.</p>
+				<p class="question">Nulla nec velit vel quam efficitur condimentum?</p>
+				<p class="answer">Proin eu congue velit. Pellentesque semper felis id nisl sodales molestie. Mauris non leo convallis, condimentum libero id, cursus est. Nunc eu placerat libero. Nullam sagittis nulla in lacus viverra, at eleifend dolor rutrum. Mauris hendrerit diam lacus, vel rutrum risus fringilla vel. Cras et elit velit. Mauris porttitor urna non luctus iaculis. Nulla maximus enim enim, id dictum tellus gravida a. Nulla ullamcorper pharetra neque, a condimentum ipsum. Praesent vulputate sed lacus quis porttitor. Nulla facilisi.</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="page-header" id="banner">
+		<div class="row">
+			<div class="col">
+				<h1>Contact Us</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="bs-component">
+				<form #contact_form="ngForm" (ngSubmit)="send_message()">
+					<div class="row">
+						<div class="col col-lg-6">
+							<fieldset>
+								<div class="form-group">
+									<label for="name" class="form-label mt-4">Name</label>
+									<input type="text" class="form-control" id="name" name="name" placeholder="Full Name" [(ngModel)]="full_name" required minlength="2">
+								</div>
+								<div class="form-group">
+									<label for="email" class="form-label mt-4">Email</label>
+									<input type="email" class="form-control" id="email" name="email" aria-describedby="email_help" placeholder="Enter email" [(ngModel)]="email" required pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z](2,4)">
+									<small id="email_help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								</div>
+							</fieldset>
+						</div>
+						<div class="col col-lg-6">
+							<fieldset>
+								<div class="form-group">
+									<label for="message" class="form-label mt-4">Message</label>
+									<textarea class="form-control" id="message" name="message" rows="7" [(ngModel)]="message"required></textarea>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<div class="row pt-2">
+						<div class="col mb-5">
+							<button type="submit" class="btn btn-primary" [disabled]="contact_form.form.invalid">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
